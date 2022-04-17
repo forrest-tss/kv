@@ -14,7 +14,7 @@ defmodule KV.BucketTest do
   end
 
   test "keys can be deleted; returns value if key exists",
-  %{bucket: bucket} do
+       %{bucket: bucket} do
     KV.Bucket.put(bucket, "eggs", 2)
 
     assert KV.Bucket.delete(bucket, "eggs") == 2
