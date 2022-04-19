@@ -31,7 +31,6 @@ defmodule KV.RegistryTest do
 
     Agent.stop(bucket, :shutdown)
 
-
     _ = KV.Registry.create(registry, "bogus")
     assert KV.Registry.lookup(registry, "shopping") == :error
   end
